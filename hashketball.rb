@@ -129,10 +129,9 @@ end
 def shoe_size(player)
   game_hash.each do |loc, team|
     team.each do |starter, stats|
-        if stats.include?(player) 
-          return game_hash[loc][starter][player][:points]
-         end
-      
+      if stats.include?(player) 
+        return game_hash[loc][starter][player][:shoe_size]
+      end
     end
   end   
 end
