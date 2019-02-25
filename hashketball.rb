@@ -138,9 +138,11 @@ end
 
 def team_colors(team_name)
  game_hash.each do |loc, team|
-    team.each do |starter, stats|
-      if stats.include?(player) 
-        return game_hash[loc][starter][player][:shoe]
+    if game_hash[location].values.include?(team_name)
+      team.each do |deet, stats|
+        if deet == :colors
+          return stats
+        end
       end
     end
   end    
