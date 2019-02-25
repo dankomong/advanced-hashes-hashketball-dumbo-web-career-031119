@@ -137,7 +137,7 @@ def shoe_size(player)
 end
 
 def team_colors(team_name)
- game_hash.each do |loc, team|
+  game_hash.each do |loc, team|
     if game_hash[loc].values.include?(team_name)
       team.each do |deet, stats|
         if deet == :colors
@@ -149,12 +149,11 @@ def team_colors(team_name)
 end
 
 def team_names
-  new_array = []
-   game_hash.each do |loc, team|
-      team.each do |deet, stats|
-        if deet == :team_name
-          new_array.push(stats)
-        end
+   new_array = []
+  game_hash.each do |loc, team|
+    team.each do |deet, stats|
+      if deet == :team_name
+        new_array.push(stats)
       end
     end
   end  
