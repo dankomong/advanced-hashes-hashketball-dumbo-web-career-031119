@@ -149,7 +149,7 @@ def team_colors(team_name)
 end
 
 def team_names
-   new_array = []
+  new_array = []
   game_hash.each do |loc, team|
     team.each do |deet, stats|
       if deet == :team_name
@@ -180,6 +180,9 @@ def player_numbers(team_name)
   new_array
 end
 
+def player_stats(name)
+  
+end 
 
 
 
