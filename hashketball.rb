@@ -181,7 +181,13 @@ def player_numbers(team_name)
 end
 
 def player_stats(name)
-  
+   game_hash.each do |loc, team|
+    team.each do |deet, stats|
+      if deet == :team_name
+        new_array.push(stats)
+      end
+    end
+  end
 end 
 
 
