@@ -195,7 +195,24 @@ def player_stats(name)
 end 
 
 def big_shoe_rebounds
-  
+  shoe_size = 0
+  name = ""
+  hash.each do |loc, team|
+    team.each do |deet, info|
+      if info.class == Hash
+        info.each do |player, stats|
+          stats.each do |stat, num|
+            if stat == :shoe
+              if shoe_size < num
+                shoe_size = num
+                name = player
+              end
+            end
+          end
+        end
+      end
+    end
+  end
 end
 
 
