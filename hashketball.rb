@@ -138,7 +138,7 @@ end
 
 def team_colors(team_name)
  game_hash.each do |loc, team|
-    if game_hash[location].values.include?(team_name)
+    if game_hash[loc].values.include?(team_name)
       team.each do |deet, stats|
         if deet == :colors
           return stats
@@ -147,6 +147,10 @@ def team_colors(team_name)
     end
   end    
 end
+
+def team_names
+  
+end 
 
 
 
