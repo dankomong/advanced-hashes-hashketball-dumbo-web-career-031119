@@ -161,7 +161,23 @@ def team_names
 end 
 
 def player_numbers(team_name)
-  
+  new_array = []
+  game_hash.each do |loc, team|
+    if game_hash[loc].values.include?(team_name)
+      team.each do |deet, info|
+        if info.class == Hash
+          info.each do |player, stats|
+            stats.each do |stat, num|
+              if stat == :number
+                new_array.push(num.to_i)
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  new_array
 end
 
 
