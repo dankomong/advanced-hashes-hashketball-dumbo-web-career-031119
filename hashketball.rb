@@ -206,10 +206,12 @@ def big_shoe_rebounds
               if shoe_size < num
                 shoe_size = num
                 name = player
+                
               end
             end
           end
         end
+        
       end
     end
   end
