@@ -136,6 +136,16 @@ def shoe_size(player)
   end   
 end
 
+def team_colors(team_name)
+ game_hash.each do |loc, team|
+    team.each do |starter, stats|
+      if stats.include?(player) 
+        return game_hash[loc][starter][player][:shoe]
+      end
+    end
+  end    
+end
+
 
 
 
