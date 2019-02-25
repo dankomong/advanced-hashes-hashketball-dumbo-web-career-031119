@@ -182,9 +182,13 @@ end
 
 def player_stats(name)
    game_hash.each do |loc, team|
-    team.each do |deet, stats|
-      if deet == :team_name
-        new_array.push(stats)
+    team.each do |deet, info|
+      if deet == :players
+        info.each do |player, stats|
+          if player == name
+            return stats  
+          end 
+        end 
       end
     end
   end
