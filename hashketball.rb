@@ -211,7 +211,7 @@ def big_shoe_rebounds
             end
           end
         end
-        game_hash[loc][deet][name][:rebounds]
+        return game_hash[loc][deet][name][:rebounds]
       end
     end
   end
