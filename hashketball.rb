@@ -118,6 +118,7 @@ end
 
 def num_points_scored(player)
   game_hash.each do |loc, team|
+    if team == :players
       team.each do |starter, stats|
         if stats.include?(player) 
           return game_hash[loc][starter][player][:points]
